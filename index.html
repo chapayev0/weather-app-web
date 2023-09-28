@@ -12,88 +12,91 @@
     <!-- Style sheets -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome for weather icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Vk5b5z5aF5F4z5E3I6QF5H8p6Bc5S5i5v5B5w5B5" crossorigin="anonymous">
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+   
     <!-- Custom CSS for card styles -->
     <style>
 
         .inp{
-
             display: flex;
             flex-direction: column;
-          
+           
+            margin-bottom: 40px;
         }
+
         input[type="text"] {
             background-color: #1F2128;
             border-radius: 5px;
             border: none;
-            color: white; /* Adjust text color for visibility */
-            width: 25%;
+            color: white;
+            width: 30%;
+            padding: 8px;
+  
         }
 
-        /* Button style */
+        
         .btn-add-city {
             position: relative;
-            left: -5px; /* Slightly offset to the left */
+            left: -5px;
+            padding: 8px;
             border-radius: 5px;
         }
 
         .weather-indicate-image{
-
-            width: 5;
-            height: 5px;
             box-sizing: border-box;
-
-            display:contents;
+            display: contents;
             justify-content: center;
-            align-items:center;
-            text-align:center;
+            align-items: center;
+            text-align: center;
+            padding-left: 10px;
         }
 
         .custom-card {
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 11px;
             padding-left: 0px;
             padding-right: 0px;
             padding-bottom: 0px;
-            margin-top: 15%; /* Increased upper margin */
-            background-color: #388EE7;
+            margin-top: 20px;
             color: rgb(231, 231, 231);
             border: none;
+            margin: 20px;
+
         }
 
         .location {
             font-size: 14px;
             font-weight: bold;
-            text-align: center; /* Center text */
+            text-align: center;
         }
 
         .datetime {
             font-size: 8px;
-            text-align: center; /* Center text */
+            text-align: center;
         }
 
         .weather {
             font-size: 10px;
-            text-align: center; /* Center text */
+            text-align: center;
             padding-left: 0px;
         }
 
         .temperature {
-            font-size: 30px;
-            text-align: center; /* Center text */
+            font-size: 25px;
+            text-align: center;
         }
 
         .max-temp {
             font-size: 8px;
-            text-align: center; /* Center text */
+            text-align: center;
         }
 
-        /* Vertically align content */
+        .min-temp {
+            font-size: 8px;
+            text-align: center;
+        }
+
+       
         .align-middle {
             display: flex;
             flex-direction: column;
@@ -101,62 +104,55 @@
             height: 100%;
         }
 
-        /* New div style */
+       
         .new-div {
             display: flex;
-            margin-top: 0px;
+            margin-top: 5px;
             padding: 0px;
-            padding-bottom: 16px; /* Added padding to fit content */
+            padding-bottom: 16px;
             background-color: rgb(49, 49, 49, 1);
             font-size: 10px;
             text-align: center;
             align-items: center;
-            
-           
         }
 
         .new-div-content {
-            display:contents;
-        
+            display: contents;
+            padding-top: 50px;
             justify-content: space-between;
             text-align: center;
         }
 
         .vertical-line {
-            border-left: 1px solid #ffffff; /* Adjust color and thickness as needed */
-            height: 20%; /* Adjust the height of the line to match your content */
+            border-left: 1px solid #ffffff;
+            height: 35px;
             position: absolute;
-            left: 34%; /* Adjust the position to place the line where you want it */
-            transform: translateX(-50%); /* Center the line horizontally */
+            left: 150px;
+            transform: translateX(-50px);
         }
 
         .vertical-line1 {
-            border-left: 1px solid #ffffff; /* Adjust color and thickness as needed */
-            height: 20%; /* Adjust the height of the line to match your content */
+            border-left: 1px solid #ffffff;
+            height: 35px;
             position: absolute;
-            left: 66%; /* Adjust the position to place the line where you want it */
-            transform: translateX(-50%); /* Center the line horizontally */
+            left: 250px;
+            transform: translateX(-50px);
         }
 
         .nav_img{
-
             width: 5;
             height: 5px;
             box-sizing: border-box;
-
-            display:contents;
+            display: contents;
             justify-content: center;
-            align-items:center;
-            text-align:center;
+            align-items: center;
+            text-align: center;
         }
-        
-        
 
         .new-div-part {
             flex: 1;
             border: 1px solid #ccc;
-            padding: 1px;
-       
+            padding: 5px;
             border-top: none;
             border-bottom: none;
             border-left: none;
@@ -166,117 +162,70 @@
         footer {
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
-            background-color: #343a40; /* Adjust the background color as needed */
-            color: white; /* Adjust the text color as needed */
+            height: 50px; 
+            background-color: #343a40;
+            color: white; 
         }
 
         .logo{
-
-            margin-top: 7%;
+            margin-top: 50px;
+            margin-bottom: 10px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            
-
+            color: white;
         }
 
         .card-img-top{
-
             position: absolute;
             background-repeat:repeat-y;
             width: 100%;
         }
+        .card-container{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex: 1
+        }
+
+        @media (max-width: 767px) {
+        .back-img .col-md-6 {
+            width: 100%;
+        }
+    }
+ 
+
     </style>
 
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container text-center"> <!-- Center content within the container -->
+    <div class="container text-center"> 
         <div class="logo">
             <img src="img/logo.png" alt="">
             <h3>Weather App</h3>
         </div>
     </div>
 
-    <div class="container text-center inp"> <!-- Center content within the container -->
+    <div class="container text-center inp"> 
         <div class="logo">
             <input type="text" class="form-control" placeholder="Enter a city">
             <button type="button" class="btn btn-primary btn-add-city">Add City</button>
         </div>
     </div>
 
+    <div class="container"> 
+        <div class="row justify-content-center card-container" id="card-container">
+            <!-- Card start -->
+            
+            <!-- card end -->
 
-
-
-    <div class="container mt-3"> <!-- Center content within the container -->
-        <div class="row justify-content-center"> <!-- Center the row horizontally -->
-            <!-- Card 1 -->
-            <div class="col-md-6 mb-3">
-                <div class="card custom-card">
-
-                    <div class="row back-img">
-
-                        <div class="col-md-6 align-middle"> <!-- Vertically align content -->
-
-                            <div class="card-img-top">
-                                <img src="img/cloud_bg.png" alt="Image Alt Text">
-                            </div>
-    
-                            
- 
-                            <div class="text-center">
-                               
-                                     
-                                <div class="location">Colombo, LK</div>
-                                <div class="datetime">9.19 AM, Feb 8</div>
-                                <div class="d-flex align-items-center datetime">
-                                    <div class="weather-indicate-image"><img src="img/few-cloud.png" alt=""></div>
-                                    
-                                    <div class="weather">Few Clouds</div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class=" col-md-6 align-middle"> <!-- Vertically align content -->
-                    
-                            <div class="text-center">
-                                <div class="temperature">27 &#176C</div>
-                                <div class="max-temp">Max temp: 30 &#176 C</div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- New Div -->
-                    <div class="new-div">
-                        <div class="bg-dark new-div-content">
-                            <div class="new-div-part">
-                                <div>Temparature</div>
-                                <div>Humidity</div>
-                                <div>Visibality</div>
-                            </div>
-
-                            <div class="vertical-line"></div>
-
-                            <div class="new-div-part">
-
-                                <div class="nav_img"><img src="img/nav.png" alt=""></div>
-                                <div>120 digree</div>
-                            </div>
-
-                            <div class="vertical-line1"></div>
-
-                            <div class="new-div-part">
-                                <div>Sunrise</div>
-                                <div>Sunset</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more cards as needed -->
+            
+            
         </div>
     </div>
 
@@ -285,5 +234,8 @@
             <p>2023 Fidenz Technologies</p>
         </div>
     </footer>
+
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </body>
 </html>
