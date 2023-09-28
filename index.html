@@ -40,6 +40,19 @@
             left: -5px; /* Slightly offset to the left */
             border-radius: 5px;
         }
+
+        .weather-indicate-image{
+
+            width: 5;
+            height: 5px;
+            box-sizing: border-box;
+
+            display:contents;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+        }
+
         .custom-card {
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,7 +80,7 @@
         .weather {
             font-size: 10px;
             text-align: center; /* Center text */
-            padding-left: 30px;
+            padding-left: 0px;
         }
 
         .temperature {
@@ -91,8 +104,8 @@
         /* New div style */
         .new-div {
             display: flex;
-            margin-top: 10px;
-            padding: 8px;
+            margin-top: 0px;
+            padding: 0px;
             padding-bottom: 16px; /* Added padding to fit content */
             background-color: rgb(49, 49, 49, 1);
             font-size: 10px;
@@ -109,15 +122,45 @@
             text-align: center;
         }
 
+        .vertical-line {
+            border-left: 1px solid #ffffff; /* Adjust color and thickness as needed */
+            height: 20%; /* Adjust the height of the line to match your content */
+            position: absolute;
+            left: 34%; /* Adjust the position to place the line where you want it */
+            transform: translateX(-50%); /* Center the line horizontally */
+        }
+
+        .vertical-line1 {
+            border-left: 1px solid #ffffff; /* Adjust color and thickness as needed */
+            height: 20%; /* Adjust the height of the line to match your content */
+            position: absolute;
+            left: 66%; /* Adjust the position to place the line where you want it */
+            transform: translateX(-50%); /* Center the line horizontally */
+        }
+
+        .nav_img{
+
+            width: 5;
+            height: 5px;
+            box-sizing: border-box;
+
+            display:contents;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+        }
+        
+        
+
         .new-div-part {
             flex: 1;
             border: 1px solid #ccc;
-            padding: 0px;
+            padding: 1px;
        
             border-top: none;
             border-bottom: none;
             border-left: none;
-            border-bottom: none;
+            border-right: none;
         }
 
         footer {
@@ -190,7 +233,8 @@
                                 <div class="location">Colombo, LK</div>
                                 <div class="datetime">9.19 AM, Feb 8</div>
                                 <div class="d-flex align-items-center datetime">
-                                    <i class="fas fa-cloud weather-icon"></i>
+                                    <div class="weather-indicate-image"><img src="img/few-cloud.png" alt=""></div>
+                                    
                                     <div class="weather">Few Clouds</div>
                                 </div>
                             </div>
@@ -199,8 +243,8 @@
                         <div class=" col-md-6 align-middle"> <!-- Vertically align content -->
                     
                             <div class="text-center">
-                                <div class="temperature">27C</div>
-                                <div class="max-temp">Max temp: 30°C</div>
+                                <div class="temperature">27 &#176C</div>
+                                <div class="max-temp">Max temp: 30 &#176 C</div>
                             </div>
                         </div>
                     </div>
@@ -213,9 +257,17 @@
                                 <div>Humidity</div>
                                 <div>Visibality</div>
                             </div>
+
+                            <div class="vertical-line"></div>
+
                             <div class="new-div-part">
+
+                                <div class="nav_img"><img src="img/nav.png" alt=""></div>
                                 <div>120 digree</div>
                             </div>
+
+                            <div class="vertical-line1"></div>
+
                             <div class="new-div-part">
                                 <div>Sunrise</div>
                                 <div>Sunset</div>
